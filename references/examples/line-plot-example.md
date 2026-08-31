@@ -2,7 +2,7 @@
 
 ## Provenance and purpose
 
-Based on `plot_lead_lag`, `DIAGNOSTIC_CASES`, and `LEAD_LAG_LINE_STYLES` in [09_basic_enso_iod_features_wsw.py](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/weak-strong-weak/scripts/09_basic_enso_iod_features_wsw.py>). The existing [lead–lag figure](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/weak-strong-weak/figures/04_lag_feedback/basic_enso_dmi_lead_lag_correlation_wsw.png>) was visually inspected: the two comparable panels retain distinct anchor definitions and readable W1/S/W2 curves.
+Derived from the `ENSO_IOD_INTERDECADAL` workflow: `weak-strong-weak/scripts/09_basic_enso_iod_features_wsw.py`, function `plot_lead_lag` and definitions `DIAGNOSTIC_CASES` and `LEAD_LAG_LINE_STYLES`. This example was selected because its comparable panels preserve distinct anchor definitions and consistent W1/S/W2 curves.
 
 The first panel correlates DJF Niño3.4 with monthly DMI; the second correlates SON DMI with monthly Niño3.4. In each, positive lag places the monthly response after the seasonal anchor. The scientific calculation anchors these at Jan(+1) and Oct(0), respectively. Do not recompute or shift correlations while plotting.
 
@@ -44,8 +44,9 @@ for case_index, (ax, (title, lag_note)) in enumerate(zip(axes, cases)):
     ax.grid(True, linestyle=":", linewidth=0.6, alpha=0.65)
 axes[0].set_ylabel("Pearson correlation coefficient")
 axes[1].legend(frameon=False, loc="lower right", fontsize=8)
-fig.suptitle("HadISST W1/S/W2 lead–lag correlation", fontsize=13)
-fig.tight_layout(rect=(0, 0, 1, 0.92))
+# Optional common figure title when needed for identification.
+# fig.suptitle("HadISST W1/S/W2 lead–lag correlation", fontsize=13)
+fig.tight_layout()
 ```
 
 The reusable logic is consistent period identity, a separate panel for each anchor/response definition, shared correlation limits, and reference lines whose meaning is clear. The 24-month range and WSW palette belong to this diagnostic.

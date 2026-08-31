@@ -4,17 +4,17 @@ Use for comparing geographic fields across periods, seasons, datasets, experimen
 
 ## Repository basis
 
-Paths below refer to `ENSO_IOD_INTERDECADAL`; function names identify the relevant plotting portions.
+Source paths below are relative to `ENSO_IOD_INTERDECADAL` and document provenance only; the referenced files are not required to use this skill.
 
 | Source | Useful pattern |
 |---|---|
-| [WSW atmospheric bridge](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/weak-strong-weak/scripts/04_atmospheric_bridge_wsw.py>), `plot_regression_figure`, `add_wsw_quiver` | Six period/difference rows × eight event seasons; SLP/OLR/chi shading with wind vectors; two scale groups |
-| [WSW basic features](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/weak-strong-weak/scripts/09_basic_enso_iod_features_wsw.py>), `plot_sst_evolution`, `setup_map_axis` | SST over a gray land backdrop, concise row/column labels, different palettes for period and difference groups |
-| [CMIP6 comparisons](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/PeriodFeatureAnalysis/scripts/cmip6/03_plot_cmip6_strong_weak_diff.py>), `plot_lonlat_with_diff`; [shared helpers](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/PeriodFeatureAnalysis/scripts/lib/cmip6_composite_tools.py>), `setup_map_axis`, `get_contour_levels_from_values` | Strong/Weak/Strong−Weak grids; positive standard deviations versus signed differences; scalar wind contours |
-| [Walker circulation](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/MechanismDiagnose/HadISST1940-2014/scripts/03b_walker_circulation_maps.py>), `plot_seasonal_level` | A single shared scale across strong, weak, and their difference; explicit chi display units |
-| [Background state](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/weak-strong-weak/scripts/11_background_state_wsw.py>), `plot_sst_wind_maps`, `add_wind_quiver` | Raw SST versus differences; separate raw/difference wind scales with matching quiver keys |
-| [Confidence overlays](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/MechanismDiagnose/HadISST1940-2014/scripts/07_plot_confidence_overlays.py>), `map_mask`, `add_lonlat_stippling`, `plot_atmospheric_regression` | Coordinate-matched significance stippling on the tested difference field, retaining the scalar field underneath |
-| [Per-model index diagnostics](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/piControl-strong-weak/scripts/01b_plot_index_diagnostics.py>), `plot_diagnostic` | Pacific ENSO and Indian Ocean DMI maps with different domains/projection centers and individual colorbars |
+| WSW atmospheric bridge — `weak-strong-weak/scripts/04_atmospheric_bridge_wsw.py`, `plot_regression_figure`, `add_wsw_quiver` | Six period/difference rows × eight event seasons; SLP/OLR/chi shading with wind vectors; two scale groups |
+| WSW basic features — `weak-strong-weak/scripts/09_basic_enso_iod_features_wsw.py`, `plot_sst_evolution`, `setup_map_axis` | SST over a gray land backdrop, concise row/column labels, different palettes for period and difference groups |
+| CMIP6 comparisons — `PeriodFeatureAnalysis/scripts/cmip6/03_plot_cmip6_strong_weak_diff.py`, `plot_lonlat_with_diff`; shared helpers — `PeriodFeatureAnalysis/scripts/lib/cmip6_composite_tools.py`, `setup_map_axis`, `get_contour_levels_from_values` | Strong/Weak/Strong−Weak grids; positive standard deviations versus signed differences; scalar wind contours |
+| Walker circulation — `MechanismDiagnose/HadISST1940-2014/scripts/03b_walker_circulation_maps.py`, `plot_seasonal_level` | A single shared scale across strong, weak, and their difference; explicit chi display units |
+| Background state — `weak-strong-weak/scripts/11_background_state_wsw.py`, `plot_sst_wind_maps`, `add_wind_quiver` | Raw SST versus differences; separate raw/difference wind scales with matching quiver keys |
+| Confidence overlays — `MechanismDiagnose/HadISST1940-2014/scripts/07_plot_confidence_overlays.py`, `map_mask`, `add_lonlat_stippling`, `plot_atmospheric_regression` | Coordinate-matched significance stippling on the tested difference field, retaining the scalar field underneath |
+| Per-model index diagnostics — `piControl-strong-weak/scripts/01b_plot_index_diagnostics.py`, `plot_diagnostic` | Pacific ENSO and Indian Ocean DMI maps with different domains/projection centers and individual colorbars |
 
 ## Panel design and labels
 
@@ -61,7 +61,7 @@ Use a mappable from the correct scale group for each shared colorbar, with the q
 
 ## Related longitude–month fields
 
-[Longitude–month diagnostics](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/MechanismDiagnose/HadISST1940-2014/scripts/05_lonmonth_regression_diagnostics.py>), `plot_field_for_band`, reuse the scalar shading/contour and grouped-colorbar decisions above on ordinary Matplotlib axes: longitude versus event-month offset, shared coordinates, and an explicit latitude-band identifier. Preserve the established month direction and offset labels. These are not geographic maps: do not add Cartopy transforms, coastlines, or latitude ticks. This related case fits here without another plot-type reference.
+The longitude–month workflow in `MechanismDiagnose/HadISST1940-2014/scripts/05_lonmonth_regression_diagnostics.py` (`plot_field_for_band`) reuses the scalar shading/contour and grouped-colorbar decisions above on ordinary Matplotlib axes: longitude versus event-month offset, shared coordinates, and an explicit latitude-band identifier. Preserve the established month direction and offset labels. These are not geographic maps: do not add Cartopy transforms, coastlines, or latitude ticks. This related case fits here without another plot-type reference.
 
 ## Check the result
 

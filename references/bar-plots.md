@@ -4,14 +4,16 @@ Use bars for discrete estimates, counts, fractions, and period/dataset/model com
 
 ## Repository basis
 
+Source paths below are relative to `ENSO_IOD_INTERDECADAL` and document provenance only; the referenced files are not required to use this skill.
+
 | Source | Useful pattern |
 |---|---|
-| [Index geometry](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/weak-strong-weak/scripts/03_index_geometry_wsw.py>), `grouped_bar_panel`, `plot_overview` | Fixed W1/S/W2 order; centered groups of index estimates; units and ranges appropriate to each metric |
-| [Coupling strength](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/weak-strong-weak/scripts/02_coupling_strength_wsw.py>), `plot_metric_bars`, `set_bar_limits` | Period colors, zero baseline, full correlation domain versus data-derived metric ranges |
-| [Multiple datasets](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/weak-strong-weak/scripts/09c_plot_multidata_response.py>), `plot` | Ocean dataset × wind dataset grid; paired period bars; shared y-range including existing confidence endpoints |
-| [Mechanism intervals](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/weak-strong-weak/scripts/08b_revised_mechanism_ols_ttest_ci_wsw.py>), `plot_ci_figure` | Grouped seasonal regression estimates; explicit lower/upper CI distances; separate relation units |
-| [IPO background](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/piControl-strong-weak/scripts/05d_plot_ipo_background.py>), `plot_group_summary`, `plot_episode_mean_tpi` | Fractions with count/denominator labels; one model per panel; chronological episodes and a pooled strong-period reference |
-| [IPO/AMO associations](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/piControl-strong-weak/scripts/05k_plot_ipo_amo_coupling_associations.py>), `plot_group_summary`, `plot_conditional_proportions` | Fixed model order, probability axes, individual-model points with equal-model mean bars, explicitly different conditional probabilities |
+| Index geometry — `weak-strong-weak/scripts/03_index_geometry_wsw.py`, `grouped_bar_panel`, `plot_overview` | Fixed W1/S/W2 order; centered groups of index estimates; units and ranges appropriate to each metric |
+| Coupling strength — `weak-strong-weak/scripts/02_coupling_strength_wsw.py`, `plot_metric_bars`, `set_bar_limits` | Period colors, zero baseline, full correlation domain versus data-derived metric ranges |
+| Multiple datasets — `weak-strong-weak/scripts/09c_plot_multidata_response.py`, `plot` | Ocean dataset × wind dataset grid; paired period bars; shared y-range including existing confidence endpoints |
+| Mechanism intervals — `weak-strong-weak/scripts/08b_revised_mechanism_ols_ttest_ci_wsw.py`, `plot_ci_figure` | Grouped seasonal regression estimates; explicit lower/upper CI distances; separate relation units |
+| IPO background — `piControl-strong-weak/scripts/05d_plot_ipo_background.py`, `plot_group_summary`, `plot_episode_mean_tpi` | Fractions with count/denominator labels; one model per panel; chronological episodes and a pooled strong-period reference |
+| IPO/AMO associations — `piControl-strong-weak/scripts/05k_plot_ipo_amo_coupling_associations.py`, `plot_group_summary`, `plot_conditional_proportions` | Fixed model order, probability axes, individual-model points with equal-model mean bars, explicitly different conditional probabilities |
 
 ## Ordering and grouping
 

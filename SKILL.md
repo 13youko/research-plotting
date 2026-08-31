@@ -28,4 +28,4 @@ Expose intermediate and final analysis results so the researcher can inspect str
 
 For a mixed figure, read the relevant combination. Each reference links to one repository-derived example; load it when concrete plotting logic is useful. Examples assume already computed results and illustrate decisions rather than fixed templates.
 
-The references were derived from `ENSO_IOD_INTERDECADAL`. Their source links provide provenance, not runtime dependencies. Relevant conventions in the current repository take precedence over illustrative settings here, subject to the user's instructions and scientific correctness. Keep the three reference categories fixed unless a clear recurring need cannot reasonably fit them.
+The references and examples draw on established plotting patterns in a geoscience research workflow. Source notes document their origins; they are not runtime dependencies. Relevant conventions in the current repository take precedence over illustrative settings here, subject to the user's instructions and scientific correctness. Keep the three reference categories fixed unless a clear recurring need cannot reasonably fit them.

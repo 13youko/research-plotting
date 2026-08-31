@@ -2,11 +2,11 @@
 
 ## Provenance and purpose
 
-Based on `plot_regression_figure` and `add_wsw_quiver` in [04_atmospheric_bridge_wsw.py](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/weak-strong-weak/scripts/04_atmospheric_bridge_wsw.py>). The existing [SLP/wind figure](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/weak-strong-weak/figures/02_atmospheric_bridge/atmospheric_bridge_slp_u10v10_nino34_regression_wsw.png>) was visually inspected: its regular rows and seasons make circulation evolution and period differences easy to scan.
+Derived from the `ENSO_IOD_INTERDECADAL` workflow: `weak-strong-weak/scripts/04_atmospheric_bridge_wsw.py`, functions `plot_regression_figure` and `add_wsw_quiver`. This example was selected because its regular period rows and event-season columns make circulation evolution and signed contrasts easy to compare.
 
 The diagnostic is ERA5 SLP shading plus u10/v10 vectors, regressed onto the raw event-year DJF Niño3.4 index. Rows contain W1/S/W2 followed by three signed contrasts. Columns preserve eight event seasons. Separate shared color scales expose period fields and contrasts; vector scale is fixed across both groups.
 
-The extraction below omits loading, regression, differencing, output handling, and batch logic. It keeps the source's 98th-percentile color limits, adds explicit saturation disclosure, and adds a physical vector key using the pattern in `plot_sst_wind_maps` in [11_background_state_wsw.py](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/weak-strong-weak/scripts/11_background_state_wsw.py>). This is plotting-only adaptation, not a verbatim source function or a new analysis.
+The extraction below omits loading, regression, differencing, output handling, and batch logic. It keeps the source's 98th-percentile color limits, adds explicit saturation disclosure, and adds a physical vector key using the pattern in `plot_sst_wind_maps` in `weak-strong-weak/scripts/11_background_state_wsw.py`. This is plotting-only adaptation, not a verbatim source function or a new analysis.
 
 ## Already computed inputs
 
@@ -71,7 +71,7 @@ for i, row in enumerate(rows):
         ax.tick_params(labelsize=8, length=2)
 
 axes[-1, -1].quiverkey(
-    q, 0.68, 0.945, 1.0, "1 m s⁻¹ per °C Niño3.4",
+    q, 0.68, 0.945, 1.0, "10 m wind: 1 m s⁻¹ per °C DJF Niño3.4",
     coordinates="figure", labelpos="E",
 )
 for group, left in (("Periods", 0.16), ("Differences", 0.57)):
@@ -79,8 +79,9 @@ for group, left in (("Periods", 0.16), ("Differences", 0.57)):
     cb = fig.colorbar(
         group_images[group], cax=cax, orientation="horizontal", extend="both",
     )
-    cb.set_label(f"{group}: SLP regression (Pa per °C Niño3.4)")
-fig.suptitle("SLP and surface-wind regression onto DJF Niño3.4", fontsize=12)
+    cb.set_label(f"{group}: SLP regression (Pa per °C DJF Niño3.4)")
+# Optional common figure title when needed for identification.
+# fig.suptitle("SLP and surface-wind regression onto DJF Niño3.4", fontsize=12)
 fig.text(
     0.5, 0.015, "Color limits: pooled 98th percentile of |SLP regression| in each group",
     ha="center", fontsize=9,

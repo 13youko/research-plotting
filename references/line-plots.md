@@ -4,13 +4,15 @@ Use lines to inspect an ordered coordinate: time, calendar month, lag, or anothe
 
 ## Repository basis
 
+Source paths below are relative to `ENSO_IOD_INTERDECADAL` and document provenance only; the referenced files are not required to use this skill.
+
 | Source | Useful pattern |
 |---|---|
-| [WSW basic features](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/weak-strong-weak/scripts/09_basic_enso_iod_features_wsw.py>), `plot_lead_lag`, `plot_monthly_std` | Two lead–lag cases with common correlation limits; monthly ENSO/DMI seasonality with twin axes |
-| [HadISST features](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/PeriodFeatureAnalysis/scripts/hadisst/02_plot_hadisst_full_period_features.py>), `plot_index_monthly_std`, `plot_rolling_correlation` | Index color versus period line style; actual year coordinate for a precomputed rolling diagnostic |
-| [Observational comparisons](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/PeriodFeatureAnalysis/scripts/obs_compare/01_compare_era5_hadisst.py>), `plot_index_timeseries` | One index per row, shared time axis, stable dataset colors, explicitly standardized indices |
-| [Index diagnostics](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/piControl-strong-weak/scripts/01b_plot_index_diagnostics.py>), `plot_diagnostic` | Monthly curves with markers on already identified peak months, alongside spatial diagnostics |
-| [Mechanism lead–lag](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/MechanismDiagnose/HadISST1940-2014/scripts/02_enso_dmi_lead_lag_correlation.py>), `LINE_STYLES`, `plot_lead_lag`; [confidence overlays](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/MechanismDiagnose/HadISST1940-2014/scripts/07_plot_confidence_overlays.py>), `plot_lead_lag` | Distinct period/all-time/difference lines; test markers attached to the tested difference curve |
+| WSW basic features — `weak-strong-weak/scripts/09_basic_enso_iod_features_wsw.py`, `plot_lead_lag`, `plot_monthly_std` | Two lead–lag cases with common correlation limits; monthly ENSO/DMI seasonality with twin axes |
+| HadISST features — `PeriodFeatureAnalysis/scripts/hadisst/02_plot_hadisst_full_period_features.py`, `plot_index_monthly_std`, `plot_rolling_correlation` | Index color versus period line style; actual year coordinate for a precomputed rolling diagnostic |
+| Observational comparisons — `PeriodFeatureAnalysis/scripts/obs_compare/01_compare_era5_hadisst.py`, `plot_index_timeseries` | One index per row, shared time axis, stable dataset colors, explicitly standardized indices |
+| Index diagnostics — `piControl-strong-weak/scripts/01b_plot_index_diagnostics.py`, `plot_diagnostic` | Monthly curves with markers on already identified peak months, alongside spatial diagnostics |
+| Mechanism lead–lag — `MechanismDiagnose/HadISST1940-2014/scripts/02_enso_dmi_lead_lag_correlation.py`, `LINE_STYLES`, `plot_lead_lag`; confidence overlays — `MechanismDiagnose/HadISST1940-2014/scripts/07_plot_confidence_overlays.py`, `plot_lead_lag` | Distinct period/all-time/difference lines; test markers attached to the tested difference curve |
 
 ## Coordinate and panel decisions
 

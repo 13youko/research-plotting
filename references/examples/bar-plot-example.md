@@ -2,7 +2,7 @@
 
 ## Provenance and purpose
 
-Based on `plot` in [09c_plot_multidata_response.py](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/weak-strong-weak/scripts/09c_plot_multidata_response.py>). The existing [2×3 response figure](</Volumes/T7 Shield/Pycharm_projects/ENSO_IOD_INTERDECADAL/weak-strong-weak/figures/06_summary/multidata_1958_1971/jja_cio_uas_eio_d20_significance_2x3_1958_1971.png>) was visually inspected: paired period estimates remain directly comparable across all six panels, including their confidence intervals.
+Derived from the `ENSO_IOD_INTERDECADAL` workflow: `weak-strong-weak/scripts/09c_plot_multidata_response.py`, function `plot`. This example was selected because its dataset grid supports direct comparison of paired period estimates and their confidence intervals across all six panels.
 
 The scientific quantity is the regression of JJA eastern Indian Ocean D20 on central Indian Ocean surface zonal wind. Ocean datasets occupy rows, wind datasets occupy columns, and gray/orange bars distinguish 1958–1971 from 1972–1998. The existing table supplies slopes and 90% two-sided OLS t-test confidence intervals.
 
@@ -57,8 +57,9 @@ for i, ocean in enumerate(oceans):
                 -0.14, 0.5, ocean, transform=ax.transAxes,
                 rotation=90, va="center", ha="center", fontsize=12,
             )
-fig.supylabel("D20 response (m per m s⁻¹ surface zonal wind)", x=0.018)
-fig.suptitle("JJA CIO wind–EIO D20 regression", fontsize=14)
+fig.supylabel("JJA EIO D20 response\n(m per m s⁻¹ CIO surface zonal wind)", x=0.018)
+# Optional common figure title when needed for identification.
+# fig.suptitle("JJA CIO wind–EIO D20 regression", fontsize=14)
 fig.legend(
     handles=[Patch(facecolor=colors[p], edgecolor="0.2", label=p) for p in periods],
     loc="upper center", bbox_to_anchor=(0.5, 0.94), ncol=2, frameon=False,
